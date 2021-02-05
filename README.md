@@ -8,16 +8,18 @@ Implement User retention analytics dashboard for Aave V2 protocol.
 
 A cohort analysis on a group of users who share a common characteristic over a certain period of time. Cohort analysis is the study of these common characteristics of these users over a specific period. To boost users retention it's critical to do cohort analysis.
 
-## Why use cohort Analysis?
+## Why Cohort Analysis?
 
 Cohort analysis is a very important for Defi protocols like Aave v2. It's imporatnt to keep track of repeat users and understand what makes them happy. This analysis can be used to identify the success of feature adoption rate and churn rates.
 
-## Subgraph Used and Data Transformations
+## Subgraph
 Data is pulled from [Aave V2 subgraph](https://thegraph.com/explorer/subgraph/vbstreetz/aave-v2).
 
 Entities Fetched:
 * UserTransaction
 * Swaps
+
+Subgraph data is tranformed to SQL tables for efficient query.
 
 ## Aave V2 User Retention Dashboard
 
@@ -56,7 +58,3 @@ Refer src/user_retention.sql for query to use.
 ## Contributing
 
 If you want to contribute to this project, feel free to fork the project and open a PR.
-
-## Licence
-
-[MIT](https://github.com/dappquery/kleros-subgraph/blob/master/LICENSE)
