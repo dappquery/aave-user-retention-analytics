@@ -40,6 +40,19 @@ You can view dashboard here: [Aave V2 dashboard](https://analytics.dappquery.com
 * Sequelize Postgres client
 * moment for datetime parsing
 
+## How to set up
+
+```
+git clone git@github.com:napolean0/aave-user-retention-analytics.git
+cd  aave-user-retention-analytics
+npm install
+npm run PopulateCohortData
+```
+
+## SQL Query
+Refer src/user_retention.sql for query to use.
+
+
 ## Contributing
 
 If you want to contribute to this project, feel free to fork the project and open a PR.
