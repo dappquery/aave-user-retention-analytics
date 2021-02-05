@@ -1,4 +1,4 @@
-# Aave V2 User Retention Cohort Analysis
+# Aave V2 Protocol User Retention Cohort Analysis
 
 Implement User retention analytics dashboard for Aave V2 protocol.
 
@@ -16,7 +16,7 @@ Cohort analysis is a very important for Defi protocols like Aave v2. It's impora
 
 ## Aave V2 Subgraph
 
-Data is pulled from [Aave V2 subgraph](https://thegraph.com/explorer/subgraph/vbstreetz/aave-v2).
+Data is pulled from [Aave V2 subgraph](https://api.thegraph.com/subgraphs/name/aave/protocol-v2).
 
 Entities Fetched:
 * UserTransaction
