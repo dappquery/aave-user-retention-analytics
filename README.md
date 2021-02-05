@@ -1,8 +1,10 @@
 # Aave V2 User Retention Cohort Analysis
 
+Implement User retention analytics dashboard for Aave V2 protocol.
+
 ![Aave V2 User Retention Analysis](https://duhy7tdvrc6v6.cloudfront.net/assets/img/aave_v2_user_retention.png)
 
-Implement User retention analytics dashboard for Aave V2 protocol.
+You can view dashboard from here: [Aave V2 dashboard](https://analytics.dappquery.com/public/dashboard/4bb1aed2-d1c4-4da2-9d9c-5cd2de020047).
 
 ## What is Cohort Analysis
 
@@ -22,8 +24,6 @@ Entities Fetched:
 Subgraph data is tranformed to SQL tables for efficient query.
 
 ## Aave V2 User Retention Dashboard
-
-You can view dashboard here: [Aave V2 dashboard](https://analytics.dappquery.com/public/dashboard/4bb1aed2-d1c4-4da2-9d9c-5cd2de020047)
 
 * Data is pulled from subgraph and transformed to SQL tables. Below tables are populated:
     * cohorts
