@@ -14,7 +14,8 @@ A cohort analysis on a group of users who share a common characteristic over a c
 
 Cohort analysis is a very important for Defi protocols like Aave v2. It's imporatnt to keep track of repeat users and understand what makes them happy. This analysis can be used to identify the success of feature adoption rate and churn rates.
 
-## Subgraph
+## Aave V2 Subgraph
+
 Data is pulled from [Aave V2 subgraph](https://thegraph.com/explorer/subgraph/vbstreetz/aave-v2).
 
 Entities Fetched:
@@ -52,8 +53,8 @@ npm run PopulateCohortData
 ```
 
 ## SQL Query
-Refer src/user_retention.sql for query to use.
 
+Refer src/user_retention.sql for query to use.
 
 ## Contributing
 
