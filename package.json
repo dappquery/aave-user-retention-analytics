@@ -1,0 +1,41 @@
+{
+  "name": "user-retention",
+  "version": "1.0.0",
+  "description": "Aave V2 protocol user retention analysis",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "PopulateCohortData": "node dist/CohortAnalysis.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "0.19.2",
+    "bignumber.js": "9.0.0",
+    "jsonschema": "1.2.4",
+    "moment": "2.29.0",
+    "node-fetch": "2.6.0",
+    "pg": "7.12.1",
+    "pg-hstore": "2.3.3",
+    "pluralize": "8.0.0",
+    "request": "2.88.0",
+    "sequelize": "6.0.0-beta.6",
+    "typescript": "3.6.2"
+  },
+  "devDependencies": {
+    "@types/chai-as-promised": "7.1.0",
+    "@types/circular-json": "0.4.0",
+    "@types/node": "11.11.3",
+    "@types/pluralize": "0.0.29",
+    "@types/request": "2.48.3",
+    "@types/bluebird": "3.5.32",
+    "@types/validator": "13.0.0",
+    "@typescript-eslint/eslint-plugin": "1.10.2",
+    "@typescript-eslint/parser": "1.10.2",
+    "@typescript-eslint/typescript-estree": "1.10.2",
+    "assemblyscript": "github:AssemblyScript/assemblyscript",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-json": "1.4.0",
+    "ts-node": "8.4.1"
+  }
+}
