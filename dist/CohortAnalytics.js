@@ -15,14 +15,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Postgres_1 = __importDefault(require("./Postgres"));
 const sequelize_1 = require("sequelize");
 const moment_1 = __importDefault(require("moment"));
-const DBConnectionUrl = 'cohort_database';
+const DBConnectionUrl = 'postgres://postgres:root@127.0.0.1:5432/dapp_development';
 const schemaName = 'aave_v2';
-const startTimestamp = 1606694400; // Launch of Aave V2 protocl
+const startTimestamp = 1606694400; // Launch of Aave V2 protocol
 const tabelNameCohort = 'cohort';
 const tableNameCohortBaseValue = 'cohortBaseValue';
 const tabelNameCohortMetricValue = 'cohortMetricValue';
-class Cohort {
-    servicePerform() {
+// Cohort Analytics of Aave V2 protocol
+class CohortAnalytics {
+    populate() {
         return __awaiter(this, void 0, void 0, function* () {
             const oThis = this;
             this.newSignupsInCohorts = {};
@@ -155,11 +156,11 @@ class Cohort {
                             weekNumber: weekNumber,
                         };
                         try {
-                            console.log(`Cohort::populateCohortMetrixValue::upserting Data In cohortMetricValues ${JSON.stringify(objectToInsert)}`);
+                            console.log(`Cohort::populateCohortMetricValue::upserting Data In cohortMetricValues ${JSON.stringify(objectToInsert)}`);
                             yield this.cohortMetricValueModel.upsert(objectToInsert);
                         }
                         catch (e) {
-                            console.log(`Cohort::populateCohortMetrixValue::Error In Inserting Data In cohort Base ${e}`);
+                            console.log(`Cohort::populateCohortMetricValue::Error In Inserting Data In cohort Base ${e}`);
                         }
                         weekNumber++;
                     }
@@ -239,5 +240,9 @@ class Cohort {
         ];
     }
 }
-exports.default = Cohort;
+exports.default = CohortAnalytics;
 ;
+console.log('Start populating cohort data');
+new CohortAnalytics().populate().then(() => {
+    console.log('Data population completed');
+});

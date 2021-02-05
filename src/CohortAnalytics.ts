@@ -4,12 +4,13 @@ import moment from "moment";
 
 const DBConnectionUrl = 'postgres://postgres:root@127.0.0.1:5432/dapp_development';
 const schemaName = 'aave_v2';
-const startTimestamp = 1606694400; // Launch of Aave V2 protocl
+const startTimestamp = 1606694400; // Launch of Aave V2 protocol
 const tabelNameCohort = 'cohort';
 const tableNameCohortBaseValue = 'cohortBaseValue';
 const tabelNameCohortMetricValue = 'cohortMetricValue';
 
-export default class Cohort {
+// Cohort Analytics of Aave V2 protocol
+export default class CohortAnalytics {
 
   private cohortModel: any;
 
@@ -23,7 +24,7 @@ export default class Cohort {
 
   private cohortData: any;
 
-  public async servicePerform() {
+  public async populate() {
     const oThis = this;
 
     this.newSignupsInCohorts = {};
@@ -158,10 +159,10 @@ export default class Cohort {
             weekNumber: weekNumber,
           }
           try {
-            console.log(`Cohort::populateCohortMetrixValue::upserting Data In cohortMetricValues ${JSON.stringify(objectToInsert)}`)
+            console.log(`Cohort::populateCohortMetricValue::upserting Data In cohortMetricValues ${JSON.stringify(objectToInsert)}`)
             await this.cohortMetricValueModel.upsert(objectToInsert);
           } catch (e) {
-            console.log(`Cohort::populateCohortMetrixValue::Error In Inserting Data In cohort Base ${e}`);
+            console.log(`Cohort::populateCohortMetricValue::Error In Inserting Data In cohort Base ${e}`);
           }
           weekNumber++;
         }
@@ -246,3 +247,9 @@ export default class Cohort {
     ];
   }
 };
+
+
+console.log('Start populating cohort data');
+new CohortAnalytics().populate().then(() => {
+  console.log('Data population completed');
+});

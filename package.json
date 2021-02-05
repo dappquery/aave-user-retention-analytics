@@ -4,7 +4,7 @@
   "description": "Aave V2 protocol user retention analysis",
   "scripts": {
     "build": "rm -rf dist && tsc",
-    "PopulateCohortData": "node dist/CohortAnalysis.js"
+    "PopulateCohortData": "node dist/CohortAnalytics.js"
   },
   "license": "MIT",
   "dependencies": {
