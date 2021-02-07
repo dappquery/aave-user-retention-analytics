@@ -16,7 +16,7 @@ A cohort analysis on a group of users who share a common characteristic over a c
 
 ## Why Cohort Analysis?
 
-Cohort analysis is a very important for Defi protocols like Aave v2. It's imporatnt to keep track of repeat users and understand what makes them happy. This analysis can be used to identify the success of feature adoption rate and churn rates.
+Cohort analysis is a very important for Defi protocols like Aave v2. It's important to keep track of repeat users and understand what makes them happy. This analysis can be used to identify the success of feature adoption rate and churn rates.
 
 ## Why Funnel Analysis?
 
