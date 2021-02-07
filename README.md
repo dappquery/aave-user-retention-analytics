@@ -28,7 +28,7 @@ Data is pulled from [Aave V2 subgraph](https://api.thegraph.com/subgraphs/name/a
 
 Entities Fetched:
 * UserTransaction
-* Swaps
+* Deposit
 
 Subgraph data is tranformed to SQL tables for efficient query.
 
@@ -44,11 +44,18 @@ Subgraph data is tranformed to SQL tables for efficient query.
 * In a cohort, user is counted only once, even he makes multiple transactions.
 * User retention is calculated based on his transaction activity week by week basis.
 
+## Funnel Anlaysis
+* Users are put in different categories like User making 2+ transactions, Users making 16+ transactions.
+* Users made 32+ and 64+ transactions have been categorized to mini whales and whales.
+* Query is run on user_transactions table to group users in different categories. Temporary table concept is used in SQL while constructing the query.
+* Funnel chart is prepared using different category and the counts.
+
 ## Technology Stack
 
 * Typescript
 * Postgres database
 * Sequelize Postgres client
+* SQL
 * moment for datetime parsing
 * Dashboard and code is hosted on AWS
 
