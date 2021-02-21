@@ -74,4 +74,4 @@ Refer src/user_retention.sql for query to use.
 
 ## Contributing
 
-If you want to contribute to this project, feel free to fork the project and open a PR.
+If you want to contribute to this project, feel free to fork the project and open a PR. Please contact [support@dappquery.com](mailto:support@dappquery.com) for any question.
